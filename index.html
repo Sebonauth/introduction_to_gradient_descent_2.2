@@ -117,39 +117,6 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <section id="section1">
-        <h1>Gradient Descent for Linear Regression</h1>
-        <div class="image-placeholder">
-            <img src="/placeholder.svg?height=300&width=600" alt="Image of a scatter plot with a line of best fit running through it.">
-        </div>
-        <p>In the last lesson, we learned how Gradient Descent helps us find the minimum of a function. Now, let's apply it to a specific problem: <strong>linear regression</strong>. Remember, linear regression is about finding the best-fitting line (or hyperplane in higher dimensions) through our data.</p>
-        <div class="vocab-section">
-            <h3>Build Your Vocab</h3>
-            <h4>Linear Regression</h4>
-            <p>A machine learning model that predicts a continuous target variable based on a linear relationship with input features.</p>
-        </div>
-        <div class="continue-button" onclick="showNextSection(2)">Continue</div>
-    </section>
-
-    <section id="section2">
-        <h2>The Cost Function for Linear Regression</h2>
-        <p>To use Gradient Descent, we need a cost function to minimize. For linear regression, a common choice is the <strong>Mean Squared Error (MSE)</strong>. It measures the average squared difference between our predicted values and the actual values in our data. Lower MSE means a better fit!</p>
-        <div class="vocab-section">
-            <h3>Build Your Vocab</h3>
-            <h4>Mean Squared Error (MSE)</h4>
-            <p>A cost function that measures the average squared difference between predicted and actual values.</p>
-        </div>
-        <p>Mathematically, MSE is defined as:</p>
-        <p>\[ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \]</p>
-        <p>Where:</p>
-        <ul>
-            <li>\(n\) is the number of data points.</li>
-            <li>\(y_i\) is the actual value of the target variable for the i-th data point.</li>
-            <li>\(\hat{y}_i\) is the predicted value of the target variable for the i-th data point.</li>
-        </ul>
-        <div class="continue-button" onclick="showNextSection(3)">Continue</div>
-    </section>
-
     <section id="section3">
         <h2>Calculating the Gradient</h2>
         <p>Now for the crucial step: calculating the gradient of the MSE cost function. The gradient tells us how much each parameter (the slope and the y-intercept of our line) needs to change to minimize the error. Don't worry, we'll break down the math step-by-step!</p>
@@ -240,37 +207,12 @@
         <div class="continue-button" onclick="showNextSection(11)">Continue</div>
     </section>
 
-    <section id="section11">
-        <h2>Putting it All Together</h2>
-        <p>We've now seen how Gradient Descent can be used to find the optimal parameters for a linear regression model. By iteratively calculating the gradient of the MSE cost function and updating our parameters, we can find the line of best fit for our data.</p>
-        <div class="image-placeholder">
-            <img src="/placeholder.svg?height=300&width=600" alt="Animation: Show an animation of a line gradually adjusting its slope and intercept to fit a scatter plot of data points as Gradient Descent iterates. Highlight how the MSE decreases with each iteration.">
-        </div>
-        <div class="continue-button" onclick="showNextSection(12)">Continue</div>
-    </section>
-
-    <section id="section12">
-        <h2>Review and Next Steps</h2>
-        <p>In this lesson, we applied Gradient Descent to the problem of linear regression. We learned about the MSE cost function, calculated its gradient, and saw how to update our model's parameters. In the next lesson, we'll explore some challenges that Gradient Descent can face and introduce a powerful variation: Stochastic Gradient Descent.</p>
-        <div class="test-your-knowledge">
-            <h3>Test Your Knowledge</h3>
-            <h4>What is the purpose of the gradient in Gradient Descent for linear regression?</h4>
-            <div id="quiz-options">
-                <label><input type="radio" name="quiz" value="0"> To determine the direction of the steepest ascent of the cost function.</label><br>
-                <label><input type="radio" name="quiz" value="1"> To determine the direction of the steepest descent of the cost function.</label><br>
-                <label><input type="radio" name="quiz" value="2"> To calculate the learning rate.</label><br>
-                <label><input type="radio" name="quiz" value="3"> To determine the starting point for the algorithm.</label><br>
-            </div>
-            <button onclick="checkAnswer()" class="continue-button">Check</button>
-            <p id="quiz-result" style="display: none;"></p>
-            <p id="quiz-explanation" style="display: none;"></p>
-        </div>
-    </section>
+    
 
     <script>
         // Show the first section initially
-        document.getElementById("section1").style.display = "block";
-        document.getElementById("section1").style.opacity = "1";
+        document.getElementById("section3").style.display = "block";
+        document.getElementById("section3").style.opacity = "1";
 
         function showNextSection(nextSectionId) {
             const currentButton = event.target;
